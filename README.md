@@ -1,6 +1,23 @@
-# Perforce Commit Logger Discord Bot 🗒️ ✏️
+# Perforce Commit Discord Webhook
+**Scripts modified from: https://github.com/JamesIves/perforce-commit-discord-bot**
 
-[![Build Status](https://travis-ci.org/JamesIves/perforce-commit-discord-bot.svg?branch=master)](https://travis-ci.org/JamesIves/perforce-commit-discord-bot) [![Issues](https://img.shields.io/github/issues/JamesIves/perforce-commit-discord-bot.svg)](https://github.com/JamesIves/perforce-commit-discord-bot/issues)
+Modifications:
+- Fix commit messages having empty lines
+- Change message format to `> Message`
+- Add timestamp
+- Fix repeat commit message when restart bot
+- Fix repeat commit message when perforce down/restarting
+- Change color to green
+- Replace Enviroment key with webhook link (**You need change the link on app.py**)
+- Add debug message on console
+- Add start script (**You need init python venv and install requirements to use the script** `python -m venv /path/to/this-project`)
+- Remove tests
+
+![image](https://user-images.githubusercontent.com/30746531/230206250-8f5b62a8-302e-41a5-868e-0bfccc8f11a3.png)
+
+-------------------------------------------------
+
+# Perforce Commit Logger Discord Bot 🗒️ ✏️
 
 With this bot you're able to keep track of commits made to a [Perforce version control](https://www.perforce.com/) server within a [Discord](https://discordapp.com/) channel. 
 
@@ -26,6 +43,3 @@ The installation will require you to enter a number of settings as environment v
 | Key  | Value Information | Required |
 | ------------- | ------------- | ------------- |
 | `DISCORD_WEBHOOK_URL`  | The [Webhook URL](https://support.discordapp.com/hc/en-us/articles/228383668-Intro-to-Webhooks) for the Discord channel you'd like the bot to post its messages to. | **Yes** |
-
-
-![Example](assets/readme.png)
